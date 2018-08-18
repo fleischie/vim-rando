@@ -1,0 +1,75 @@
+*rando.txt*   Generate pseudo-random numbers
+
+Version:    1.0
+Author:     Karl Fleischmann <fleischmann.karl@gmail.com>
+License:    Vim license, see |license|
+Homepage:   https://github.com/fleischie/vim-rando
+
+===============================================================================
+Contents                                                              *rando*
+
+    1. Warning ............................................ |rando-warning|
+    1. Usage .............................................. |rando-usage|
+    2. Options ............................................ |rando-options|
+    3. Credits ............................................ |rando-credits|
+
+===============================================================================
+1. Warning                                                    *rando-warning*
+
+WARNING: This plugin should not be used for any security-related purposes.
+
+===============================================================================
+2. Usage                                                        *rando-usage*
+
+                                                        *GetRandomNumber()*
+`GetRandomNumber()` returns a pseudo-random number between 0 and 1 inclusively.
+>
+    let element = GetRandomNumber()
+<
+                                                        *Choice(list)*
+`Choice(list)` returns a random element from the given list. >
+
+    let choices = ['a', 'b', 'c']
+    let element = Choice(choices)
+
+===============================================================================
+3. Options                                                    *rando-options*
+
+                                                        *rando_is_seeded*
+                                                        *g:rando_is_seeded*
+If equal to 0, seeding function will be called with the |rando_seed| argument.
+If equal to 1, seeding function will not be called.
+
+                                                        *rando_seed*
+                                                        *g:rando_seed*
+Seed you want to use, when generating random numbers.
+Default: |localtime|
+
+                                                        *rando_lib*
+                                                        *g:rando_lib*
+Library you want to create random numbers with.
+Default: `rand`
+
+                                                        *rando_seed_func*
+                                                        *g:rando_seed_func*
+Library you want to seed your random number generation with.
+Default: `srand`
+
+                                                        *rando_func*
+                                                        *g:rando_func*
+Library you want to create your random number generation with. This is by
+default the standard C library file per system.
+Default:
+- linux: "libc.so.6"
+- macOS: "libSystem.dylib"
+- win:   "msvcrt"
+
+===============================================================================
+4. Credits                                                    *rando-credits*
+
+Rando was written by Karl Fleischmann and is released under the Vim license,
+see |license|.
+
+===============================================================================
+
+ vim: tw=79 ts=8 sw=8 sts=8 et ft=help
