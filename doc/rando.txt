@@ -45,6 +45,12 @@ If equal to 1, seeding function will not be called.
 Seed you want to use, when generating random numbers.
 Default: |localtime|
 
+                                                        *rando_max*
+                                                        *g:rando_max*
+
+Maximum random number, that is used from the library call.
+Default: `65535`.
+
                                                         *rando_lib*
                                                         *g:rando_lib*
 Library you want to create random numbers with.

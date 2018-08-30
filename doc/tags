@@ -3,6 +3,7 @@ GetRandomNumber()	rando.txt	/*GetRandomNumber()*
 g:rando_func	rando.txt	/*g:rando_func*
 g:rando_is_seeded	rando.txt	/*g:rando_is_seeded*
 g:rando_lib	rando.txt	/*g:rando_lib*
+g:rando_max	rando.txt	/*g:rando_max*
 g:rando_seed	rando.txt	/*g:rando_seed*
 g:rando_seed_func	rando.txt	/*g:rando_seed_func*
 rando	rando.txt	/*rando*
@@ -14,5 +15,6 @@ rando.txt	rando.txt	/*rando.txt*
 rando_func	rando.txt	/*rando_func*
 rando_is_seeded	rando.txt	/*rando_is_seeded*
 rando_lib	rando.txt	/*rando_lib*
+rando_max	rando.txt	/*rando_max*
 rando_seed	rando.txt	/*rando_seed*
 rando_seed_func	rando.txt	/*rando_seed_func*
