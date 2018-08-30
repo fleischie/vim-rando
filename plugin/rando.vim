@@ -5,15 +5,15 @@ endif
 let g:loaded_rando = 1
 let g:rando_max = 65535
 
+if !exists('g:rando_seed')
+  let g:rando_seed = localtime()
+endif
+
 let s:uname = system('uname')
 if v:shell_error
   let s:os = 'Win'
 else
-  let s:os = substitute(system('uname'), '\n', '', '')
-endif
-
-if !exists('g:rando_seed')
-  let g:rando_seed = localtime()
+  let s:os = substitute(s:uname, '\n', '', '')
 endif
 
 if !exists('g:rando_lib')
